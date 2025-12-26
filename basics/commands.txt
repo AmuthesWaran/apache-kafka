@@ -1,0 +1,11 @@
+bin/kafka-console-producer.sh --bootstrap-server localhost:9092 --topic phishing-sites
+
+echo "This is a test message" | bin/kafka-console-producer.sh --bootstrap-server localhost:9092 --topic phishing-sites
+
+bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic phishing-sites --from-beginning
+
+bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic phishing-sites--from-beginning --max-messages 2
+
+bin/kafka-topics.sh --list --bootstrap-server localhost:9092
+
+bin/kafka-console-producer.sh --bootstrap-server localhost:9092 --topic phishing-sites
